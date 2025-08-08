@@ -1,3 +1,4 @@
+import 'package:app_loop/Modules/Auth/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,55 +15,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff1E90FF)),
         primaryColor: Color(0xff1E90FF),
-      ),
-      home: const MyHomePage(title: 'Primeiro aplicativo Allan'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff1E90FF),
-
-        title: Text(widget.title, style: TextStyle(color: Colors.white)),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Clique no botão para aumentar a contagem:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        scaffoldBackgroundColor: Color(0xff121212),
+        textTheme: TextTheme(
+          titleMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w700,
+            color: Color(0xff1E90FF),
+            fontSize: 30,
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Incrementa',
-        child: const Icon(Icons.add),
-      ),
+      home: SplashScreen(),
     );
   }
 }
