@@ -67,6 +67,29 @@ class _LoginState extends State<Login> {
                         prefixIcon: Icon(Icons.lock, color: Colors.grey),
                       ),
                     ),
+                    SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        onPressed: () {},
+                        style: FilledButton.styleFrom(
+                          backgroundColor: const Color(0xff1E90FF),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                        ),
+
+                        child: const Text(
+                          'Entrar',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
