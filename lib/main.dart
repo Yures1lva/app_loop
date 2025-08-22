@@ -23,6 +23,13 @@ class MyApp extends StatelessWidget {
             color: Color(0xff1E90FF),
             fontSize: 30,
           ),
+          headlineMedium: TextStyle(
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+
+            color: Colors.white,
+            fontSize: 20,
+          ),
         ),
       ),
       home: SplashScreen(),
