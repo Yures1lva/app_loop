@@ -1,4 +1,4 @@
-import 'package:app_loop/Modules/Auth/splash.dart';
+import 'package:app_loop/Modules/Auth/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'App Loop',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff1E90FF)),
@@ -29,6 +30,12 @@ class MyApp extends StatelessWidget {
 
             color: Colors.white,
             fontSize: 20,
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: "Montserrat",
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 18,
           ),
         ),
       ),

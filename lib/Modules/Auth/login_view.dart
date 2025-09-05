@@ -1,3 +1,4 @@
+import 'package:app_loop/Modules/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -71,7 +72,15 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       width: double.infinity,
                       child: FilledButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            // ignore: use_build_context_synchronously
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeView(),
+                            ),
+                          );
+                        },
                         style: FilledButton.styleFrom(
                           backgroundColor: const Color(0xff1E90FF),
                           shape: RoundedRectangleBorder(
